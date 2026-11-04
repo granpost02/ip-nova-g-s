@@ -1,0 +1,7 @@
+{
+  "name": "NOVAGÁS – Conversão de Veículos para GNV em Nova Iguaçu",
+  "description": "Oficina especializada em conversão para GNV, reteste de cilindros e manutenção de kits GNV na Rodovia Presidente Dutra 12.500, Nova Iguaçu - RJ. Economize até 60% em combustível.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
