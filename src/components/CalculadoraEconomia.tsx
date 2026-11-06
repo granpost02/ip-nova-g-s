@@ -92,19 +92,19 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
   };
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#102038] via-[#0b172a] to-[#102038] border border-blue-900/50 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
       {/* Luzes de fundo atmosféricas */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-10 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
 
       {/* Cabeçalho da Calculadora */}
       <div className="relative z-10 max-w-3xl mb-8 sm:mb-10">
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-amber-400/10 border border-amber-400/20 text-xs font-bold text-amber-400 uppercase tracking-wider mb-3">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-yellow-400/10 border border-yellow-400/30 text-xs font-bold text-yellow-400 uppercase tracking-wider mb-3">
           <Calculator className="w-4 h-4" />
           <span>Calculadora de Economia GNV</span>
         </div>
         <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-display tracking-tight">
-          Calcule sua economia mensal ao <span className="text-amber-400">converter para GNV</span>
+          Calcule sua economia mensal ao <span className="text-yellow-400">converter para GNV</span>
         </h2>
         <p className="text-sm sm:text-base text-slate-300 mt-2.5 leading-relaxed">
           Informe seus dados de rodagem e veja na ponta do lápis o quanto você economiza no combustível e no IPVA no Estado do Rio de Janeiro.
@@ -115,14 +115,14 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
         {/* Painel Esquerdo: Entradas do Usuário */}
         <div className="lg:col-span-7 space-y-6">
           {/* 1. Média de km rodados por mês (com botões de perfil rápido e slider) */}
-          <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 sm:p-6 space-y-4">
+          <div className="bg-[#081224] border border-blue-900/50 rounded-2xl p-5 sm:p-6 space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <label htmlFor={kmMonthSliderId} className="text-sm font-bold text-white flex items-center gap-2">
-                <Gauge className="w-4 h-4 text-amber-400" />
+                <Gauge className="w-4 h-4 text-yellow-400" />
                 <span>Média de KM rodados por mês:</span>
               </label>
               <div className="flex items-center gap-2">
-                <span className="text-2xl font-black text-amber-400 font-display tabular-nums">
+                <span className="text-2xl font-black text-yellow-400 font-display tabular-nums">
                   {kmPerMonth.toLocaleString('pt-BR')}
                 </span>
                 <span className="text-xs text-slate-400 font-semibold uppercase">km/mês</span>
@@ -138,7 +138,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
               step="100"
               value={kmPerMonth}
               onChange={(e) => setKmPerMonth(Number(e.target.value))}
-              className="w-full h-2.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-amber-400 focus:outline-none"
+              className="w-full h-2.5 bg-blue-950 rounded-lg appearance-none cursor-pointer accent-yellow-400 focus:outline-none"
             />
 
             {/* Marcadores de referência */}
@@ -150,7 +150,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
             </div>
 
             {/* Atalhos rápidos por perfil */}
-            <div className="pt-2 border-t border-slate-800/60">
+            <div className="pt-2 border-t border-blue-900/40">
               <span className="block text-[11px] uppercase font-semibold text-slate-400 mb-2">
                 Ou selecione uma média frequente:
               </span>
@@ -165,10 +165,10 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                     key={preset.label}
                     type="button"
                     onClick={() => setKmPerMonth(preset.km)}
-                    className={`py-2 px-2.5 rounded-xl text-left border transition-all ${
+                    className={`py-2 px-2.5 rounded-xl text-left border transition-all cursor-pointer ${
                       kmPerMonth === preset.km
-                        ? 'bg-amber-400 text-slate-950 border-amber-400 font-bold shadow-md shadow-amber-400/20'
-                        : 'bg-slate-900 border-slate-800 text-slate-300 hover:text-white hover:border-slate-700'
+                        ? 'bg-yellow-400 text-slate-950 border-yellow-400 font-bold shadow-md shadow-yellow-400/20'
+                        : 'bg-[#102038] border-blue-900/50 text-slate-300 hover:text-white hover:border-blue-700'
                     }`}
                   >
                     <span className="block text-xs font-bold leading-tight">{preset.label}</span>
@@ -184,7 +184,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
           {/* 2. Consumo do Veículo e Combustível Atual */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Tipo de Combustível Líquido Atual */}
-            <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 space-y-2.5">
+            <div className="bg-[#081224] border border-blue-900/50 rounded-2xl p-5 space-y-2.5">
               <label htmlFor={fuelTypeSelectId} className="text-xs font-bold text-slate-300 uppercase tracking-wide flex items-center gap-1.5">
                 <Fuel className="w-4 h-4 text-sky-400" />
                 <span>Combustível Atual</span>
@@ -193,10 +193,10 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                 <button
                   type="button"
                   onClick={() => handleFuelTypeChange('gasolina')}
-                  className={`py-2 px-3 rounded-xl text-xs font-bold border transition-colors ${
+                  className={`py-2 px-3 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
                     fuelType === 'gasolina'
                       ? 'bg-sky-500 text-white border-sky-400 shadow-sm'
-                      : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white'
+                      : 'bg-[#102038] text-slate-400 border-blue-900/50 hover:text-white'
                   }`}
                 >
                   Gasolina
@@ -204,10 +204,10 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                 <button
                   type="button"
                   onClick={() => handleFuelTypeChange('etanol')}
-                  className={`py-2 px-3 rounded-xl text-xs font-bold border transition-colors ${
+                  className={`py-2 px-3 rounded-xl text-xs font-bold border transition-colors cursor-pointer ${
                     fuelType === 'etanol'
                       ? 'bg-emerald-600 text-white border-emerald-500 shadow-sm'
-                      : 'bg-slate-900 text-slate-400 border-slate-800 hover:text-white'
+                      : 'bg-[#102038] text-slate-400 border-blue-900/50 hover:text-white'
                   }`}
                 >
                   Etanol
@@ -219,9 +219,9 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
             </div>
 
             {/* Consumo do Veículo Atual (km/litro) */}
-            <div className="bg-slate-950/80 border border-slate-800 rounded-2xl p-5 space-y-2">
+            <div className="bg-[#081224] border border-blue-900/50 rounded-2xl p-5 space-y-2">
               <label htmlFor={consumptionInputId} className="text-xs font-bold text-slate-300 uppercase tracking-wide flex items-center gap-1.5">
-                <Gauge className="w-4 h-4 text-amber-400" />
+                <Gauge className="w-4 h-4 text-yellow-400" />
                 <span>Consumo do Veículo</span>
               </label>
               <div className="relative pt-1">
@@ -233,7 +233,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                   max="30"
                   value={vehicleConsumption}
                   onChange={(e) => setVehicleConsumption(Number(e.target.value) || 1)}
-                  className="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-white font-bold text-lg tabular-nums focus:outline-none focus:border-amber-400 transition-colors"
+                  className="w-full bg-[#102038] border border-blue-800 rounded-xl px-3.5 py-2.5 text-white font-bold text-lg tabular-nums focus:outline-none focus:border-yellow-400 transition-colors"
                 />
                 <span className="absolute right-3.5 top-3.5 text-xs text-slate-400 font-semibold pointer-events-none">
                   km / Litro
@@ -250,14 +250,14 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
             <button
               type="button"
               onClick={() => setShowAdvancedPrices(!showAdvancedPrices)}
-              className="text-xs text-slate-400 hover:text-amber-400 transition-colors flex items-center gap-1.5"
+              className="text-xs text-slate-400 hover:text-yellow-400 transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <Coins className="w-3.5 h-3.5" />
               <span>{showAdvancedPrices ? 'Ocultar ajuste de tarifas' : 'Ajustar preços por litro/m³ (opcional)'}</span>
             </button>
 
             {showAdvancedPrices && (
-              <div className="grid grid-cols-2 gap-3 mt-3 p-4 bg-slate-950/90 border border-slate-800 rounded-xl animate-in fade-in duration-200 text-xs">
+              <div className="grid grid-cols-2 gap-3 mt-3 p-4 bg-[#081224] border border-blue-900/50 rounded-xl animate-in fade-in duration-200 text-xs">
                 <div>
                   <label className="block text-slate-400 mb-1">
                     Preço {fuelType === 'gasolina' ? 'Gasolina' : 'Etanol'} (R$/L):
@@ -267,7 +267,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                     step="0.05"
                     value={liquidPrice}
                     onChange={(e) => setLiquidPrice(Number(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-white font-bold tabular-nums focus:outline-none focus:border-amber-400"
+                    className="w-full bg-[#102038] border border-blue-800 rounded-lg px-2.5 py-1.5 text-white font-bold tabular-nums focus:outline-none focus:border-yellow-400"
                   />
                 </div>
                 <div>
@@ -277,7 +277,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                     step="0.05"
                     value={gnvPrice}
                     onChange={(e) => setGnvPrice(Number(e.target.value) || 0)}
-                    className="w-full bg-slate-900 border border-slate-700 rounded-lg px-2.5 py-1.5 text-white font-bold tabular-nums focus:outline-none focus:border-amber-400"
+                    className="w-full bg-[#102038] border border-blue-800 rounded-lg px-2.5 py-1.5 text-white font-bold tabular-nums focus:outline-none focus:border-yellow-400"
                   />
                 </div>
               </div>
@@ -286,13 +286,13 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
         </div>
 
         {/* Painel Direito: Cartão de Resultados e Conversão */}
-        <div className="lg:col-span-5 bg-gradient-to-b from-slate-900 to-slate-950 border-2 border-amber-400/40 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+        <div className="lg:col-span-5 bg-gradient-to-b from-[#102038] to-[#081224] border-2 border-yellow-400/40 rounded-3xl p-6 sm:p-8 shadow-2xl relative">
           {/* Header do Resultado */}
-          <div className="flex items-center justify-between pb-4 border-b border-slate-800">
-            <span className="text-xs uppercase font-extrabold text-slate-400 tracking-wider">
+          <div className="flex items-center justify-between pb-4 border-b border-blue-900/40">
+            <span className="text-xs uppercase font-extrabold text-slate-300 tracking-wider">
               Sua Economia Estimada
             </span>
-            <span className="text-xs font-black text-slate-950 bg-amber-400 px-3 py-1 rounded-full shadow-sm">
+            <span className="text-xs font-black text-slate-950 bg-yellow-400 px-3 py-1 rounded-full shadow-sm">
               ~{savingsPercent}% de Redução
             </span>
           </div>
@@ -302,7 +302,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
             <span className="text-xs font-semibold text-slate-300 block mb-1">
               Você economiza no combustível:
             </span>
-            <div className="text-4xl sm:text-5xl font-black text-amber-400 font-display tabular-nums tracking-tight">
+            <div className="text-4xl sm:text-5xl font-black text-yellow-400 font-display tabular-nums tracking-tight">
               R$ {Math.round(monthlySavings).toLocaleString('pt-BR')}
               <span className="text-base font-semibold text-slate-400 ml-1.5">/mês</span>
             </div>
@@ -316,7 +316,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
           </div>
 
           {/* Comparativo de Gastos */}
-          <div className="space-y-3 pb-5 border-b border-slate-800 text-xs">
+          <div className="space-y-3 pb-5 border-b border-blue-900/40 text-xs">
             <div className="flex justify-between items-center text-slate-300">
               <span>Gasto mensal no combustível atual:</span>
               <span className="font-bold text-rose-400 tabular-nums text-sm">
@@ -329,7 +329,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
                 R$ {Math.round(gnvMonthlyCost).toLocaleString('pt-BR')}
               </span>
             </div>
-            <div className="flex justify-between items-center text-slate-400 pt-2 border-t border-slate-800/80">
+            <div className="flex justify-between items-center text-slate-400 pt-2 border-t border-blue-900/40">
               <span>Retorno do investimento (Payback):</span>
               <span className="font-semibold text-sky-400 tabular-nums">
                 ~ {paybackMonths} meses
@@ -346,9 +346,9 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
             <p className="text-[11px] text-slate-300 leading-snug">
               Veículos convertidos para GNV pagam apenas <strong>1,5% de IPVA</strong> (contra 4% da gasolina), gerando uma economia adicional média de ~R$ 1.250/ano.
             </p>
-            <div className="text-xs font-bold text-amber-300 pt-1">
+            <div className="text-xs font-bold text-yellow-300 pt-1">
               Economia total projetada (Combustível + IPVA):{' '}
-              <span className="tabular-nums font-black text-amber-400">
+              <span className="tabular-nums font-black text-yellow-400">
                 R$ {Math.round(totalAnnualSavingsWithIpva).toLocaleString('pt-BR')} / ano
               </span>
             </div>
@@ -358,7 +358,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
           <div className="space-y-3 pt-2">
             <button
               onClick={handleSendToWhatsApp}
-              className="w-full py-4 px-4 bg-amber-400 hover:bg-amber-300 text-slate-950 font-black rounded-xl text-sm transition-all shadow-xl shadow-amber-400/25 active:scale-98 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-4 px-4 bg-yellow-400 hover:bg-yellow-300 text-slate-950 font-black rounded-xl text-sm transition-all shadow-xl shadow-yellow-400/25 active:scale-98 flex items-center justify-center gap-2 cursor-pointer uppercase"
             >
               <Sparkles className="w-4 h-4 fill-slate-950" />
               <span>ENVIAR SIMULAÇÃO PELO WHATSAPP</span>
@@ -366,7 +366,7 @@ export const CalculadoraEconomia: React.FC<CalculadoraEconomiaProps> = ({
 
             <button
               onClick={() => onOpenQuoteModal('Conversão para GNV')}
-              className="w-full py-3 px-4 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full py-3 px-4 bg-blue-950 hover:bg-blue-900/80 text-slate-200 border border-blue-800/60 rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 cursor-pointer"
             >
               <span>Personalizar com o Modelo do Meu Carro</span>
               <ArrowRight className="w-3.5 h-3.5" />

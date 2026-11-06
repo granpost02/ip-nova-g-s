@@ -32,10 +32,10 @@ export const COMPANY_INFO = {
     fullFormatted: 'Rodovia Presidente Dutra, nº 12.500 — Dentro do Posto Austral, Nova Iguaçu – RJ',
   },
   phone: {
-    raw: '+5521993791003',
-    formatted: '+55 21 99379-1003',
-    displayFormatted: '(21) 99379-1003',
-    link: 'tel:+5521993791003',
+    raw: '2135840147',
+    formatted: '(21) 3584-0147',
+    displayFormatted: '(21) 3584-0147',
+    link: 'tel:2135840147',
   },
   whatsapp: {
     raw: '5521993791003',

@@ -30,25 +30,21 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-slate-950/95 backdrop-blur-md border-b border-slate-800/80 transition-all">
+    <header className="sticky top-0 z-40 w-full bg-[#091426]/95 backdrop-blur-md border-b border-blue-900/50 transition-all">
       {/* Top micro info strip for local trust */}
-      <div className="hidden lg:block bg-slate-900 border-b border-slate-800/60 text-xs text-slate-400 py-1.5 px-6">
+      <div className="hidden lg:block bg-[#060e1c] border-b border-blue-900/40 text-xs text-slate-300 py-1.5 px-6">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <span className="text-amber-400 font-semibold tracking-wide">NOVA IGUAÇU – RJ</span>
+            <span className="text-yellow-400 font-bold tracking-wide">NOVA IGUAÇU – RJ</span>
             <span className="text-slate-600">·</span>
             <span>Rodovia Presidente Dutra, 12.500 (Dentro do Posto Austral)</span>
-            <span className="text-slate-600">·</span>
-            <span className="text-amber-300 font-black bg-amber-400/15 border border-amber-400/30 px-2 py-0.5 rounded text-[10px] tracking-wider uppercase">
-              ★ Selo 30 Anos de Experiência
-            </span>
           </div>
           <div className="flex items-center gap-4">
             <span>Atendimento: Seg à Sex 08h–18h | Sáb 08h–13h</span>
             <span className="text-slate-600">·</span>
             <a
               href={COMPANY_INFO.phone.link}
-              className="text-amber-400 hover:text-amber-300 font-medium transition-colors"
+              className="text-yellow-400 hover:text-yellow-300 font-semibold transition-colors"
             >
               Central: {COMPANY_INFO.phone.formatted}
             </a>
@@ -63,19 +59,14 @@ export const Header: React.FC<HeaderProps> = ({
           onClick={() => handleNavClick('inicio')}
           className="flex items-center gap-3 text-left group whitespace-nowrap shrink-0 focus:outline-none"
         >
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center text-slate-950 shadow-md shadow-amber-500/20 group-hover:scale-105 transition-transform">
+          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-slate-950 shadow-md shadow-yellow-400/20 group-hover:scale-105 transition-transform">
             <Flame className="w-6 h-6 stroke-[2.5]" />
           </div>
           <div className="flex flex-col">
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-black tracking-tight text-white font-display uppercase leading-none">
-                NOVA<span className="text-amber-400">GÁS</span>
-              </span>
-              <span className="hidden sm:inline-flex items-center gap-1 bg-gradient-to-r from-amber-400 to-amber-500 text-slate-950 font-black text-[9px] px-2 py-0.5 rounded-md uppercase tracking-wider shadow-sm">
-                30 ANOS
-              </span>
-            </div>
-            <span className="text-[10px] tracking-wider text-slate-400 font-semibold uppercase mt-1">
+            <span className="text-2xl font-black tracking-tight text-white font-display uppercase leading-none">
+              NOVA<span className="text-yellow-400">GÁS</span>
+            </span>
+            <span className="text-[10px] tracking-wider text-slate-300 font-semibold uppercase mt-1">
               CONVERSÃO DE VEÍCULOS GNV
             </span>
           </div>
@@ -91,24 +82,24 @@ export const Header: React.FC<HeaderProps> = ({
                 onClick={() => handleNavClick(link.id)}
                 className={`transition-colors whitespace-nowrap py-1 relative ${
                   isActive
-                    ? 'text-amber-400 font-bold'
-                    : 'text-slate-300 hover:text-white'
+                    ? 'text-yellow-400 font-bold'
+                    : 'text-slate-200 hover:text-white'
                 }`}
               >
                 {link.label}
                 {isActive && (
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-amber-400 rounded-full" />
+                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-yellow-400 rounded-full" />
                 )}
               </button>
             );
           })}
         </nav>
 
-        {/* Zone 3: Primary Actions (matching screenshot with Solicitar Orçamento + WhatsApp) */}
+        {/* Zone 3: Primary Actions */}
         <div className="flex items-center gap-3 shrink-0">
           <button
             onClick={() => onOpenQuoteModal()}
-            className="inline-flex items-center justify-center px-4 py-2.5 text-xs sm:text-sm font-black text-slate-950 bg-amber-400 hover:bg-amber-300 rounded-lg shadow-md shadow-amber-400/20 active:scale-95 transition-all whitespace-nowrap shrink-0 cursor-pointer uppercase"
+            className="inline-flex items-center justify-center px-4 py-2.5 text-xs sm:text-sm font-black text-slate-950 bg-yellow-400 hover:bg-yellow-300 rounded-lg shadow-md shadow-yellow-400/25 active:scale-95 transition-all whitespace-nowrap shrink-0 cursor-pointer uppercase"
           >
             <span>SOLICITAR ORÇAMENTO</span>
           </button>
@@ -137,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-slate-950 border-b border-slate-800 px-4 pt-3 pb-6 animate-in slide-in-from-top duration-200">
+        <div className="lg:hidden bg-[#091426] border-b border-blue-900/50 px-4 pt-3 pb-6 animate-in slide-in-from-top duration-200">
           <nav className="flex flex-col space-y-1">
             {navLinks.map((link) => {
               const isActive = activeTab === link.id;
@@ -147,18 +138,18 @@ export const Header: React.FC<HeaderProps> = ({
                   onClick={() => handleNavClick(link.id)}
                   className={`flex items-center justify-between w-full px-4 py-3 text-base font-medium rounded-lg text-left transition-colors ${
                     isActive
-                      ? 'bg-amber-400/10 text-amber-400 border border-amber-400/20'
-                      : 'text-slate-200 hover:bg-slate-900'
+                      ? 'bg-yellow-400/10 text-yellow-400 border border-yellow-400/30'
+                      : 'text-slate-200 hover:bg-blue-900/40'
                   }`}
                 >
                   <span>{link.label}</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />}
+                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />}
                 </button>
               );
             })}
           </nav>
 
-          <div className="mt-4 pt-4 border-t border-slate-800 flex flex-col gap-2">
+          <div className="mt-4 pt-4 border-t border-blue-900/40 flex flex-col gap-2">
             <a
               href={COMPANY_INFO.phone.link}
               className="flex items-center justify-center gap-2 py-3 px-4 bg-slate-900 hover:bg-slate-800 border border-slate-700 rounded-lg text-sm font-semibold text-slate-200 transition-colors"

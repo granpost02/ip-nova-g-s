@@ -35,9 +35,9 @@ export default function App() {
   // Sync document title with active tab for SEO & analytics
   useEffect(() => {
     const titles: Record<string, string> = {
-      inicio: 'NOVAGÁS – 30 Anos de Conversão GNV em Nova Iguaçu RJ',
+      inicio: 'NOVAGÁS – Conversão de Veículos para GNV em Nova Iguaçu RJ',
       servicos: 'Serviços GNV – Conversão, Reteste e Manutenção | NOVAGÁS',
-      sobre: 'Sobre a NOVAGÁS – 30 Anos Fazendo Isso na Rodovia Pres. Dutra RJ',
+      sobre: 'Sobre a NOVAGÁS – Especialistas em GNV na Rodovia Pres. Dutra RJ',
       avaliacoes: 'Avaliações no Google – Clientes e Motoristas | NOVAGÁS',
       contato: 'Contato e Localização – Posto Austral Nova Iguaçu RJ | NOVAGÁS',
     };
@@ -57,7 +57,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100 font-sans selection:bg-amber-400 selection:text-slate-950 bg-carbon-pattern">
+    <div className="min-h-screen flex flex-col bg-[#0c192e] text-slate-100 font-sans selection:bg-yellow-400 selection:text-slate-950 bg-carbon-pattern">
       {/* Top Navigation */}
       <Header
         activeTab={activeTab}
