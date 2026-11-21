@@ -145,7 +145,7 @@ export const Footer: React.FC<FooterProps> = ({
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />
-                <span>Reteste de Cilindro (A partir de R$ 90)</span>
+                <span>Reteste de Cilindro (A partir de R$ 99 a R$ 199)</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-400" />

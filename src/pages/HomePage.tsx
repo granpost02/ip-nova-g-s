@@ -99,7 +99,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-yellow-400 shrink-0" />
-                  <span>Reteste a partir de R$ 90</span>
+                  <span>Reteste a partir de R$ 99 a R$ 199</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-yellow-400 shrink-0" />
@@ -111,16 +111,17 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Right Column: Hero Visual Asset (Outside Façade Photo of the shop) */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-2xl overflow-hidden border border-blue-900/60 shadow-2xl bg-[#102038] group">
-                <img
-                  src={COMPANY_INFO.images.baysBanner}
-                  alt="Fachada externa da oficina NOVAGÁS no Posto Austral na Rodovia Presidente Dutra"
-                  className="w-full h-[380px] sm:h-[450px] object-cover object-center group-hover:scale-102 transition-transform duration-500"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0c192e] via-[#0c192e]/20 to-transparent" />
-                
-                {/* Floating Badge on Photo */}
-                <div className="absolute bottom-4 left-4 right-4 bg-[#081224]/95 backdrop-blur-md border border-blue-900/60 rounded-xl p-3.5 shadow-lg flex items-center justify-between">
+                <div className="relative aspect-video w-full overflow-hidden bg-[#081224]">
+                  <img
+                    src={COMPANY_INFO.images.baysBanner}
+                    alt="Fachada externa da oficina Nova Gas Conversão para GNV, Reteste e Manutenção no Posto Austral"
+                    className="w-full h-full object-cover object-center group-hover:scale-102 transition-transform duration-500"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+
+                {/* Info Bar below Photo */}
+                <div className="bg-[#081224] border-t border-blue-900/60 p-4 flex items-center justify-between gap-3">
                   <div>
                     <span className="text-xs font-bold text-yellow-400 uppercase tracking-wide block">
                       Fachada Externa · Posto Austral
@@ -133,7 +134,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                     href={COMPANY_INFO.maps.googleMapsRouteUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-2 bg-yellow-400 hover:bg-yellow-300 text-slate-950 rounded-lg transition-colors"
+                    className="p-2.5 bg-yellow-400 hover:bg-yellow-300 text-slate-950 rounded-lg transition-colors shrink-0"
                     title="Ver localização"
                   >
                     <Navigation className="w-4 h-4" />
@@ -180,7 +181,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white font-display">
-              Reteste de Cilindro a partir de R$ 90
+              Reteste de Cilindro a partir de R$ 99 a R$ 199
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Ensaio hidrostático e verificação de válvulas com preço justo e processo otimizado, para seu veículo rodar legalizado e passar com tranquilidade na vistoria anual.
@@ -301,7 +302,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="relative rounded-2xl overflow-hidden border border-blue-900/50 group shadow-lg">
             <img
               src={COMPANY_INFO.images.baysBanner}
-              alt="Fachada e boxes de atendimento com banner Reteste a partir de R$ 90 na NOVAGÁS"
+              alt="Fachada e boxes de atendimento da Nova Gas Conversão para GNV, Reteste e Manutenção"
               className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
               referrerPolicy="no-referrer"
             />
