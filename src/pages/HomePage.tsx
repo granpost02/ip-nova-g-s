@@ -59,7 +59,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               {/* Main Headline */}
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-black text-white font-display tracking-tight leading-[1.15]">
                 Seu veículo preparado para rodar com GNV com{' '}
-                <span className="text-yellow-400 underline decoration-yellow-400/40 decoration-wavy underline-offset-8">
+                <span className="text-yellow-400">
                   qualidade e confiança
                 </span>
                 .
@@ -99,7 +99,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-yellow-400 shrink-0" />
-                  <span>Reteste a partir de R$ 99 a R$ 199</span>
+                  <span>Reteste a partir de R$ 199</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-yellow-400 shrink-0" />
@@ -181,7 +181,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <ShieldCheck className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-bold text-white font-display">
-              Reteste de Cilindro a partir de R$ 99 a R$ 199
+              Reteste de Cilindro a partir de R$ 199
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
               Ensaio hidrostático e verificação de válvulas com preço justo e processo otimizado, para seu veículo rodar legalizado e passar com tranquilidade na vistoria anual.

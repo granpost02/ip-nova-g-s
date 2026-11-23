@@ -99,12 +99,12 @@ export const SERVICES_LIST: ServiceItem[] = [
     shortDesc: 'Ensaio hidrostático obrigatório a cada 5 anos para renovação de vistoria e segurança total.',
     fullDesc: 'Serviço essencial para garantir a integridade estrutural do cilindro de alta pressão e permitir a aprovação na vistoria anual do Inmetro. Na NOVAGÁS, seu cilindro é inspecionado com rigor para identificar microfissuras, corrosão ou desgaste mecânico.',
     benefits: [
-      'Promoção especial: A partir de R$ 99,00 a R$ 199,00',
+      'Promoção especial: A partir de R$ 199,00',
       'Verificação rigorosa de válvulas de segurança e estanqueidade',
       'Item obrigatório para aprovação da vistoria periódica',
       'Atendimento ágil com o menor tempo de parada para o motorista',
     ],
-    highlightTag: 'A partir de R$ 99 a R$ 199 · Promoção',
+    highlightTag: 'A partir de R$ 199,00 · Promoção',
     imagePath: COMPANY_INFO.images.baysBanner,
     defaultPriceNote: 'Consulte condições e prazos para o tamanho do seu cilindro.',
   },
@@ -190,7 +190,7 @@ export const FAQ_LIST: FaqItem[] = [
   },
   {
     question: 'De quanto em quanto tempo devo fazer o Reteste de Cilindro?',
-    answer: 'O reteste hidrostático do cilindro de GNV deve ser realizado obrigatoriamente a cada 5 anos, ou antes caso o cilindro sofra algum impacto, colisão traseira ou corrosão aparente. Na NOVAGÁS, temos ampla estrutura para reteste a partir de R$ 99,00 a R$ 199,00.',
+    answer: 'O reteste hidrostático do cilindro de GNV deve ser realizado obrigatoriamente a cada 5 anos, ou antes caso o cilindro sofra algum impacto, colisão traseira ou corrosão aparente. Na NOVAGÁS, temos ampla estrutura para reteste a partir de R$ 199,00.',
     category: 'reteste',
   },
   {
